@@ -62,15 +62,23 @@ function parseProduct (product) {
   productImg.append("<img src='" + img + "'/>");
 
   if (sets.length > 1) {
-    productFooter.append("<div class='multi set'></div>");
+    productFooter.append("<div class='multi'></div>");
+    let setsElem = $("<div class='sets'></div>");
+
     sets.forEach(set => {
       let setElem = $("<div class='set'></div>");
-      setElem.append("<span class='price'>Php. " + set.price + "</span>");
+      setElem.append("<span class='price'>\u20B1 " + set.price + "</span>");
       setElem.append("<span class='description'>" + set.description + "</span>");
+
+      setsElem.append(setElem);
     })
+
+    productFooter.children('.multi').append(setsElem);
+    productFooter.children('.multi').append("<i class='angle down icon expand'></i>");
+
   } else {
     productFooter.append("<div class='set'></div>");
-    productFooter.children('.set').append("<span class='price'>Php. " + sets[0].price + "</span>");
+    productFooter.children('.set').append("<span class='price'>\u20B1 " + sets[0].price + "</span>");
     productFooter.children('.set').append("<span class='description'>" + sets[0].description + "</span>");
   }
 
@@ -80,3 +88,14 @@ function parseProduct (product) {
 
   return productBody;
 }
+
+$(document).on('click', '.multi', (e) => {
+  e.stopPropagation();
+  if ($(e.target).parents('.multi').hasClass("shown") || 
+    $(e.target).hasClass("shown")) {
+    $(e.target).parents(".multi").removeClass("shown");
+    $(e.target).removeClass("shown");
+  } else {
+    $(e.target).parents(".multi").addClass("shown");
+  }
+})
