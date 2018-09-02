@@ -1,0 +1,59 @@
+[
+  {
+    "title": "Glass Coasters",
+    "sets": [
+      {
+        "price": 350.00,
+        "description": "Set of 6"
+      }
+    ]
+  },
+  {
+    "title": "Doily",
+    "sets": [
+      {
+        "price": 220.00,
+        "description": "Standard 7.5in diameter"
+      },
+      {
+        "price": 270.00,
+        "description": "Bigger than the standard"
+      }
+    ]
+  },
+  {
+    "title": "Doily and Coasters",
+    "sets": [
+      {
+        "price": 480.00,
+        "description": "1pc Doily w/ 6pcs Coasters"
+      }
+    ]
+  },
+  {
+    "title": "Glass Sleeves",
+    "sets": [
+      {
+        "price": 410.00,
+        "description": "Set of 4"
+      }
+    ]
+  },
+  {
+    "title": "Coffe Cup Cozy",
+    "sets": [
+      {
+        "price": 240.00,
+        "description": "9in long w/ button closure"
+      },
+      {
+        "price": 410.00,
+        "description": "Set of 3 w/ standard sized buttons"
+      },
+      {
+        "price": 370.00,
+        "description": "Set of 3 w/ no buttons"
+      }
+    ]
+  }
+]
