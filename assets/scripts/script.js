@@ -41,6 +41,42 @@ $.ajax({
   method: "GET",
   success: (data) => {
     var data = JSON.parse(data);
-    console.log(data);
+    
+    data.forEach(product => {
+      $("#products #body").append(parseProduct(product));
+    })
   }
 })
+
+function parseProduct (product) {
+  let title = product.title,
+      img = product.img,
+      sets = product.sets;
+
+  let productBody = $("<div class='product'></div>");
+  let productHeader = $("<div class='header'></div>");
+  let productFooter = $("<div class='footer'></div>");
+  let productImg = $("<div class='img'></div>");
+
+  productHeader.text(title);
+  productImg.append("<img src='" + img + "'/>");
+
+  if (sets.length > 1) {
+    productFooter.append("<div class='multi set'></div>");
+    sets.forEach(set => {
+      let setElem = $("<div class='set'></div>");
+      setElem.append("<span class='price'>Php. " + set.price + "</span>");
+      setElem.append("<span class='description'>" + set.description + "</span>");
+    })
+  } else {
+    productFooter.append("<div class='set'></div>");
+    productFooter.children('.set').append("<span class='price'>Php. " + sets[0].price + "</span>");
+    productFooter.children('.set').append("<span class='description'>" + sets[0].description + "</span>");
+  }
+
+  productBody.append(productHeader);
+  productBody.append(productImg);
+  productBody.append(productFooter);
+
+  return productBody;
+}

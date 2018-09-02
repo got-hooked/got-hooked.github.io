@@ -11,16 +11,16 @@ body {
   font-family: $content_font;
 }
 
-.Landing {
+.landing {
   background-color: $primary;
   background-image: 
     linear-gradient(to top, $primary, $secondary 80%, $tertiary)
 }
 
-.Fancy {
+.fancy {
   font-family: $header_font;
 }
 
-.Regular {
+.regular {
   font-family: $content_font;
 }

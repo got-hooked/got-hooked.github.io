@@ -9,7 +9,7 @@
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
     -->
-    
+
   <!-- include semantic ui css -->
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css">
 
@@ -29,20 +29,38 @@
   </noscript>
   <div id="root"></div>
   <div>
-    <div class="Landing">
-      <div class="Description">
-        <h1 class="Fancy">Who Are We?</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur fugiat ducimus explicabo! Iusto nemo necessitatibus,
+    <div class="landing">
+      <div class="logo">
+        <img src="./assets/img/logo-filled.png" alt="Got Hooked">
+      </div>
+      <div class="description">
+        <h1 class="fancy">Who Are We?</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur fugiat ducimus explicabo! Iusto nemo
+          necessitatibus,
           sunt sit non, maxime rem illo quae laborum possimus maiores nostrum inventore corrupti earum beatae?</p>
-        <a href='#Products'>Shop Now!</a>
+        <a href='#products'>Shop Now!</a>
       </div>
     </div>
-    <div class="Products" id="Products">
-  
+    <div class="products" id="products">
+      <div class="header">
+        <img src="./assets/img/logo.png">
+        Products
+      </div>
+      <div id="body">
+        <div class="product">
+          <div class="header">
+            <span class="title"></span>
+          </div>
+          <div class="img"></div>
+          <div class="footer">
+            <div class="sets"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="assets/scripts/script.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="assets/scripts/script.js" defer></script>
 </body>
 
 </html>

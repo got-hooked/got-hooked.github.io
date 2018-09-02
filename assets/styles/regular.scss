@@ -1,23 +1,52 @@
-.Products {
+@import "main";
+
+.products {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     height: 100vh;
+
+    .header {
+        font-family: $header_font;
+        font-weight: bold;
+        font-size: 3.5rem;
+        padding: 25px;
+        display: flex;
+        align-items: center;
+        color: #333;
+
+        img {
+            margin-right: 25px;
+            height: 3.5rem;
+        }
+    }
 }
 
-.Landing {
+.landing {
     background-image: url('../img/landing.png');
     background-position: center;
     background-attachment: fixed;
     height: 100vh;
-    .Description {
+
+    .logo {
+        padding: 30px;
+        text-align: center; 
+        img {
+            width: 60%;
+            max-width: 300px;
+        }
+    }
+
+    .description {
         max-width: 400px;
         text-align: center;
         margin: 0 auto;
-        padding: 50px 10px;
-        .Fancy {
+        padding: 15px 10px;
+
+        .fancy {
             color: #111;
             display: inline-block;
             margin-bottom: 15px;
         }
+
         a {
             display: inline-block;
             margin-top: 15px;
@@ -25,12 +54,14 @@
             padding: 10px 25px;
             background-color: #333;
             color: #ffffff;
+
             &:hover {
                 background-color: #444;
             }
         }
     }
-    > .gigantic {
+
+    >.gigantic {
         line-height: 9rem;
         font-size: 9rem;
         color: #ffffff;
@@ -40,9 +71,11 @@
         display: inline-block;
         z-index: 100;
         text-shadow: 8px 3px rgba(0, 0, 0, 0.6);
+
         span:nth-child(2) {
             position: relative;
             left: 30px;
+
             &::after {
                 content: '';
                 position: absolute;
@@ -54,5 +87,5 @@
                 z-index: -1;
             }
         }
-    }   
+    }
 }
