@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.Landing {
+  background-color: #f3c1ff;
+  background-image: linear-gradient(to top, #f3c1ff, #cdc1ff 80%, #c1d5ff);
+}
+
+.Fancy {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+.Regular {
+  font-family: "Open Sans", sans-serif;
+}
+
+/*# sourceMappingURL=main.css.map */

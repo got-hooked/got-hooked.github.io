@@ -1,0 +1,26 @@
+$header_font: 'M PLUS Rounded 1c', sans-serif;
+$content_font: 'Open Sans', sans-serif;
+
+$primary: #f3c1ff;
+$secondary: #cdc1ff;
+$tertiary: #c1d5ff;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $content_font;
+}
+
+.Landing {
+  background-color: $primary;
+  background-image: 
+    linear-gradient(to top, $primary, $secondary 80%, $tertiary)
+}
+
+.Fancy {
+  font-family: $header_font;
+}
+
+.Regular {
+  font-family: $content_font;
+}

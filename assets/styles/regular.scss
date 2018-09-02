@@ -1,0 +1,58 @@
+.Products {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    height: 100vh;
+}
+
+.Landing {
+    background-image: url('../img/landing.png');
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    .Description {
+        max-width: 400px;
+        text-align: center;
+        margin: 0 auto;
+        padding: 50px 10px;
+        .Fancy {
+            color: #111;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        a {
+            display: inline-block;
+            margin-top: 15px;
+            font-size: 1.3rem;
+            padding: 10px 25px;
+            background-color: #333;
+            color: #ffffff;
+            &:hover {
+                background-color: #444;
+            }
+        }
+    }
+    > .gigantic {
+        line-height: 9rem;
+        font-size: 9rem;
+        color: #ffffff;
+        position: relative;
+        top: 50%;
+        left: 25px;
+        display: inline-block;
+        z-index: 100;
+        text-shadow: 8px 3px rgba(0, 0, 0, 0.6);
+        span:nth-child(2) {
+            position: relative;
+            left: 30px;
+            &::after {
+                content: '';
+                position: absolute;
+                left: -30px;
+                top: -3rem;
+                height: 10rem;
+                width: calc(100% + 40px);
+                background-color: #111;
+                z-index: -1;
+            }
+        }
+    }   
+}
